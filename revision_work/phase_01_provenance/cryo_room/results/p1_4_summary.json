@@ -1,0 +1,44 @@
+{
+  "stage": "P1.4 original record source-neutral audit",
+  "original_cryogenic_rows": 54,
+  "original_room_rows": 160,
+  "total_rows": 214,
+  "row_paper_doi_matches_verified": 0,
+  "row_material_identities_verified": 0,
+  "unverified_rows": 214,
+  "all_original_rows_preserved": true,
+  "cryogenic_temperature_min_k": 2,
+  "cryogenic_temperature_max_k": 120,
+  "cryogenic_distinct_temperatures_k": [
+    2,
+    4,
+    4.2,
+    7,
+    20,
+    40,
+    60,
+    70,
+    77,
+    80,
+    90,
+    100,
+    120
+  ],
+  "room_temperature_source_column": "ABSENT",
+  "room_missing_temperature_records": 160,
+  "flag_counts": {
+    "LOADING_BASIS_AND_SCALE_UNVERIFIED": 20,
+    "ROW_TEMPERATURE_MISSING_FROM_ORIGINAL": 160
+  },
+  "same_recorded_inputs_groups": 3,
+  "different_target_groups": 3,
+  "original_workbook_sha256": {
+    "Cryogenic/Cryogenic Temp.xlsx": "51f5e924c948854a0cf1474617769b2597a7f54f29e5a4a5937b3760bfb6bd4b",
+    "Room/Room Temp.xlsx": "1bdee4c5ec93acd88300f6d2925b74793b5a6197efebcc230c16c42aeef8da7c"
+  },
+  "manuscript_regime_paper_references": {
+    "Cryogenic": "19-23",
+    "Room": "24-28"
+  },
+  "source_match_warning": "Manuscript bibliography is not a record-to-paper mapping. No source identities inferred."
+}

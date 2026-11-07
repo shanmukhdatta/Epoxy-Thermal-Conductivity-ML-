@@ -1,0 +1,28 @@
+{
+  "run_id": 42362093453,
+  "artifact_id": 13569344275,
+  "artifact_url": "https://github.com/shanmukhdatta/Epoxy-Thermal-Conductivity-ML-/actions/runs/42362093453/artifacts/13569344275",
+  "generated_at_utc": "2026-11-07T10:00:43Z",
+  "full_evidence_file_count": 6,
+  "files": [
+    {
+      "name": "cryo_room_214_source_neutral_ledger.csv",
+      "rows": 214,
+      "size_bytes": 62229,
+      "sha256": "a0f11ee2572656169bcde0b92a74140621c2054ab260f2e6217e76a169338f04"
+    },
+    {
+      "name": "cryo_54_unresolved.csv",
+      "rows": 54,
+      "size_bytes": 15204,
+      "sha256": "0ed1466e4827467e0923ac591d6818fa3dffab235e644bce83920c4df95c7497"
+    },
+    {
+      "name": "room_160_unresolved.csv",
+      "rows": 160,
+      "size_bytes": 47571,
+      "sha256": "febc98ce3bd86d9c144ad2318de527e99706aaf008d38c55f32eb8ee58072405"
+    }
+  ],
+  "notes": "Full row-level CSVs are reproducible using the committed script and three original XLSX workbooks; artifact expires after 30 days. Download for long-term secondary archive."
+}
