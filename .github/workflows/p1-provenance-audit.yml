@@ -1,0 +1,36 @@
+name: P1 provenance numeric audit - revision-work
+on:
+  push:
+    branches: [revision-work]
+    paths:
+      - "revision_work/phase_01_provenance/**"
+      - ".github/workflows/p1-provenance-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  p1-source-neutral-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout isolated revision branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run fresh P1 unit tests
+        run: python -m unittest discover -s revision_work/phase_01_provenance/tests -p "test_*.py" -v
+      - name: Run source-neutral audit on three original Excel files
+        run: python revision_work/phase_01_provenance/audit_originals.py --repo . --output "$RUNNER_TEMP/p1_outputs"
+      - name: Upload record-level audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-numeric-audit-and-unverified-ledger
+          path: ${{ runner.temp }}/p1_outputs/
+          retention-days: 30
+          if-no-files-found: warn
