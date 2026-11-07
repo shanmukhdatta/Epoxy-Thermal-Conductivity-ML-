@@ -61,7 +61,7 @@ def write_csv(path,columns,rows):
         w.writerows(rows)
 
 def read_assertions(path):
-    with path.open(newline="",encoding="utf-8-sig") as f:
+    with Path(path).open(newline="",encoding="utf-8-sig") as f:
         reader=csv.DictReader(f)
         if tuple(reader.fieldnames or ())!=ASSERTION_COLUMNS:
             raise ValueError("Evidence assertions CSV has wrong columns")

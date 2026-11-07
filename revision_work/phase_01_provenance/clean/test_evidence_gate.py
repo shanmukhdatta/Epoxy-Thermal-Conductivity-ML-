@@ -59,6 +59,8 @@ class EvidenceGatedPartitionTests(unittest.TestCase):
         with (self.out/"exclusion_uncertainty_register.csv").open(newline="") as f:
             flagged=[r for r in csv.DictReader(f) if "SAME_INPUTS_DIFFERENT_TARGETS" in r["reason_codes"]]
         self.assertEqual(len(flagged),6)
+    def test_cli_style_string_path_supported(self):
+        self.assertEqual(MOD.read_assertions(str(ASSERTIONS)), [])
     def test_output_directory_guard(self):
         with self.assertRaisesRegex(ValueError,"outside frozen checkout"):
             MOD.build(REPO,REPO/"revision_work/phase_01_provenance/clean",ASSERTIONS)
