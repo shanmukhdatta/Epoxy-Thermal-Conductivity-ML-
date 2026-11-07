@@ -1,0 +1,34 @@
+{
+  "stage": "P1.3 high-temperature source compatibility screening",
+  "source_file": "High/High Temp.xlsx",
+  "records_examined": 42,
+  "verified_paper_to_row_matches": 0,
+  "verified_material_identities": 0,
+  "verified_liquid_records": 0,
+  "verified_epoxy_records": 0,
+  "unknown_provenance": 42,
+  "temperature_range_kelvin": [
+    308,
+    423
+  ],
+  "distinct_recorded_temperatures": 10,
+  "records_at_298_15_kelvin": 0,
+  "matrix_conductivity_numeric_bands": {
+    "km_0_60_to_0_68": 25,
+    "km_other": 17
+  },
+  "filler_conductivity_numeric_bands": {
+    "kf_28_to_29_25": 6,
+    "kf_other": 17,
+    "kf_399_to_400": 4,
+    "kf_2_93_to_3_10": 15
+  },
+  "manuscript_candidate_ref_29_doi": "10.1002/adfm.201201824",
+  "ref_29_epoxy_material_and_wt_fraction": "Verified at paper level, not row level",
+  "notes": [
+    "Cannot infer water or epoxy from thermal-conductivity ranges",
+    "The publisher reports ref 29 filler loading in wt percent; recorded Excel Vol basis is unverified",
+    "No high Excel row is linked to an original paper table or figure",
+    "No records have been excluded or corrected"
+  ]
+}
