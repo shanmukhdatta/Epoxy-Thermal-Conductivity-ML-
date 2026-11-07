@@ -1,0 +1,29 @@
+{
+  "phase": "P1.5",
+  "total_original_rows": 256,
+  "per_regime": {
+    "Cryogenic": 54,
+    "Room": 160,
+    "High": 42
+  },
+  "original_workbook_sha256": {
+    "Cryogenic/Cryogenic Temp.xlsx": "51f5e924c948854a0cf1474617769b2597a7f54f29e5a4a5937b3760bfb6bd4b",
+    "Room/Room Temp.xlsx": "1bdee4c5ec93acd88300f6d2925b74793b5a6197efebcc230c16c42aeef8da7c",
+    "High/High Temp.xlsx": "f246cfc1226aa006be68872e1b7b7ad47a3f87844bd9a43b49ca452a6405e66e"
+  },
+  "verified_source_rows": 0,
+  "paper_to_row_unverified": 256,
+  "partitions": {
+    "verified_epoxy_experimental": 0,
+    "other_solid": 0,
+    "liquid_systems": 0,
+    "analytical_or_simulated": 0,
+    "unknown_provenance": 256
+  },
+  "eligible_for_future_training": 0,
+  "unresolved_target_conflict_rows": 6,
+  "recorded_room_t_missing": 160,
+  "original_numerical_data_modified": false,
+  "deleted_original_rows": 0,
+  "note": "No row-level publication verification exists in provided evidence assertions. Blank verified dataset is scientifically intentional."
+}

@@ -1,0 +1,70 @@
+{
+  "source_workflow_run_id": 42362819354,
+  "source_artifact_id": 13570064451,
+  "artifact_download_url": "https://github.com/shanmukhdatta/Epoxy-Thermal-Conductivity-ML-/actions/runs/42362819354/artifacts/13570064451",
+  "artifact_retention_days": 30,
+  "source_commit": "2544b581dccb3d23c27b45d59c6700f971243ee8",
+  "source": "Exact bytes independently downloaded from successful GitHub Actions artifact and checksummed",
+  "files": [
+    {
+      "name": "P1_5_RECONCILIATION.json",
+      "bytes": 1025,
+      "sha256": "5b22f798d9e503077bfdfe56eb200f7db964ff3fa0fa9a0a97767a320f773e7e",
+      "rows": null
+    },
+    {
+      "name": "P1_5_STATUS.md",
+      "bytes": 1231,
+      "sha256": "740eddc417f5c40fb83ae5c9ad3d83b05f3499759a48192fc8323caab22e5ebe",
+      "rows": null
+    },
+    {
+      "name": "all_256_original_with_status.csv",
+      "bytes": 52731,
+      "sha256": "bb4c6b4272ed056cac67668d5e84d7887bae543106b5ba2462350de4fdd0ffe0",
+      "rows": 256
+    },
+    {
+      "name": "analytical_or_simulated.csv",
+      "bytes": 431,
+      "sha256": "78ff94255e80d5c5f6990a4041a93d5eff1e608f0ed0143e8a9fe4b0eb516459",
+      "rows": 0
+    },
+    {
+      "name": "exclusion_uncertainty_register.csv",
+      "bytes": 90047,
+      "sha256": "bc7b21a249a0c19cad10e421a5a12636e45b6bb61a92872d2d5af5e50d08d854",
+      "rows": 256
+    },
+    {
+      "name": "liquid_systems.csv",
+      "bytes": 431,
+      "sha256": "78ff94255e80d5c5f6990a4041a93d5eff1e608f0ed0143e8a9fe4b0eb516459",
+      "rows": 0
+    },
+    {
+      "name": "other_solid.csv",
+      "bytes": 431,
+      "sha256": "78ff94255e80d5c5f6990a4041a93d5eff1e608f0ed0143e8a9fe4b0eb516459",
+      "rows": 0
+    },
+    {
+      "name": "unit_conversion_register.csv",
+      "bytes": 13511,
+      "sha256": "39575e51bb969c7650aa6c6959ad1bb46d7c4281fcfca0b1c3a891a1be59fafc",
+      "rows": 256
+    },
+    {
+      "name": "unknown_provenance.csv",
+      "bytes": 52731,
+      "sha256": "bb4c6b4272ed056cac67668d5e84d7887bae543106b5ba2462350de4fdd0ffe0",
+      "rows": 256
+    },
+    {
+      "name": "verified_epoxy_experimental.csv",
+      "bytes": 431,
+      "sha256": "78ff94255e80d5c5f6990a4041a93d5eff1e608f0ed0143e8a9fe4b0eb516459",
+      "rows": 0
+    }
+  ]
+}
