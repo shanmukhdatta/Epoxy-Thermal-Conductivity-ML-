@@ -1,0 +1,19 @@
+{
+  "repository": "shanmukhdatta/Epoxy-Thermal-Conductivity-ML-",
+  "branch": "revision-work",
+  "source_repository": "Pradeep-gif-hub/Research_Paper_TC",
+  "baseline_commit": "972671a33bba7a9531e92029602b3d2000eabd96",
+  "baseline_tree": "b5bd8517bebf1cf4c03bc4d55f108fd805088149",
+  "original_git_blob_count": 81,
+  "manuscript_original_observations_claimed": 259,
+  "repository_derived_csv_observations": 256,
+  "scientific_reconciliation_status": "UNRESOLVED",
+  "github_actions_trigger": "push to revision-work",
+  "original_commit_includes_preexisting_revision_work": true,
+  "checksums_precomputed_from_raw_bytes": 10,
+  "not_committed_private_files": [
+    "MEAS-D-26-20648.pdf",
+    "MEAS-D-26-20648-reviews.pdf",
+    "Reviewer Suggestions and Manuscript Revision Plan.pdf"
+  ]
+}
