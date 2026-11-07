@@ -1,0 +1,32 @@
+name: P1.5 evidence-gated clean-original datasets
+on:
+  push:
+    branches: [revision-work]
+    paths:
+      - "revision_work/phase_01_provenance/clean/**"
+      - ".github/workflows/p1-clean-original-gate.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  p1-5-verified-partition-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run evidence gate tests against original XLSX
+        run: python -m unittest discover -s revision_work/phase_01_provenance/clean -p 'test_*.py' -v
+      - name: Generate all 256 clean-original ledgers and categories
+        run: python revision_work/phase_01_provenance/clean/build_evidence_gated_data.py --repo . --assertions revision_work/phase_01_provenance/clean/source_assertions.csv --output "$RUNNER_TEMP/p1_5_outputs"
+      - name: Upload P1.5 versioned evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-5-all-256-clean-evidence
+          path: ${{ runner.temp }}/p1_5_outputs/
+          retention-days: 30
+          if-no-files-found: error

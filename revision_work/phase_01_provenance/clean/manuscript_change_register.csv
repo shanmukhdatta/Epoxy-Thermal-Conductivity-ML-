@@ -1,0 +1,9 @@
+issue_id,reviewer_issue,observed_evidence,required_change,disposition,phase_gate
+P1-M01,Dataset original count mismatch,256 original rows in frozen XLSX versus 259 manuscript claim,Reconcile provenance and update count only after proof,OPEN,P1-P11
+P1-M02,High temperature source confusion,Reviewer says ref29 BNNT-POSS epoxy; earlier code guessed water for 25 numeric rows,Source-match all 42 records and revise material narrative only from evidence,OPEN,P1.3-P11
+P1-M03,Study physical-domain mixing,Manuscript cites Kevlar optical fibers transparent sand graphite TPU Cu matrix and epoxy works,Create source-confirmed material partitions and narrow paper claims,OPEN,P1.5-P11
+P1-M04,Room source temperatures,160 room rows have no recorded T while manuscript assumes about 300 K,Report modeling assumption separately and recover source T where available,OPEN,P1.5-P11
+P1-M05,Loading basis,Source ref29 uses wt percent but original Excel column says Vol,Verify basis and document density conversion before normalization,OPEN,P1.5-P11
+P1-M06,Conflicting observations,3 same-numeric-input groups have six different target rows,Trace studies and processing conditions before deleting or aggregating,OPEN,P1.5-P11
+P1-M07,Theory treated as experiment,Reviewer notes analytical outputs in literature comparison tables,Audit measurement type before experimental training or claims,OPEN,P1.5-P11
+P1-M08,Augmentation and model evaluation,Reviewer notes leakage when augmenting before splitting,Rebuild leakage-safe pipeline later using only verified eligible originals,DEFERRED,P2-P5
