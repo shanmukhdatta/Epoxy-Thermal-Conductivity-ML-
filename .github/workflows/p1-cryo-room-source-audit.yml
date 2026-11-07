@@ -1,0 +1,36 @@
+name: P1.4 Cryogenic & Room provenance screen
+on:
+  push:
+    branches: [revision-work]
+    paths:
+      - "revision_work/phase_01_provenance/cryo_room/**"
+      - ".github/workflows/p1-cryo-room-source-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  p1-4-original-records:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout revision-work
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test original cryogenic and room workbooks
+        run: python -m unittest discover -s revision_work/phase_01_provenance/cryo_room -p 'test_*.py' -v
+      - name: Produce 214-row evidence package
+        run: python revision_work/phase_01_provenance/cryo_room/screen_cryo_room.py --repo . --output "$RUNNER_TEMP/p1_4"
+      - name: Upload source-neutral results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-4-cryo-room-214-original-audit
+          path: ${{ runner.temp }}/p1_4/
+          retention-days: 30
+          if-no-files-found: error
