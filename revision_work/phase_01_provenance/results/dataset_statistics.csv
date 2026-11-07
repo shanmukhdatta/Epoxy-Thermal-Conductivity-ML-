@@ -1,0 +1,16 @@
+regime,field,total_rows,count,missing_or_nonnumeric,min,max,mean,median
+Cryogenic,base_tc_w_mk,54,54,0,0.01,0.38,0.15975925925925927,0.17959999999999998
+Cryogenic,filler_tc_w_mk,54,54,0,0.1,23900.0,3700.381240740741,30.0
+Cryogenic,loading_value_unconverted,54,54,0,7.0,60.0,25.822222222222223,25.0
+Cryogenic,temperature_k_observed,54,54,0,2.0,120.0,43.318518518518516,20.0
+Cryogenic,composite_tc_w_mk,54,54,0,0.05,1.0,0.5096425925925926,0.5361
+Room,base_tc_w_mk,160,160,0,0.05,0.92,0.258725,0.2
+Room,filler_tc_w_mk,160,160,0,0.165,4320.0,730.3883125,250.0
+Room,loading_value_unconverted,160,160,0,0.25,70.0,16.1316875,10.0
+Room,temperature_k_observed,160,0,160,,,,
+Room,composite_tc_w_mk,160,160,0,0.107,2.0,0.76849125,0.639
+High,base_tc_w_mk,42,42,0,0.2,0.68,0.4778095238095238,0.6
+High,filler_tc_w_mk,42,42,0,2.93,400.0,107.42785714285715,28.875
+High,loading_value_unconverted,42,42,0,1.0,40.0,7.083333333333333,3.0
+High,temperature_k_observed,42,42,0,308.0,423.0,335.6190476190476,323.0
+High,composite_tc_w_mk,42,42,0,0.65,1.9,1.0487142857142857,0.9125000000000001

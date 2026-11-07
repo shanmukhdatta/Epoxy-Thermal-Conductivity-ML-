@@ -1,0 +1,4 @@
+group_type,observation_ids,number_records,number_distinct_targets,conflicting_target_flag,review_disposition
+same_recorded_inputs,ROO_048;ROO_101,2,2,yes,manual_review_no_rows_removed
+same_recorded_inputs,ROO_060;ROO_125,2,2,yes,manual_review_no_rows_removed
+same_recorded_inputs,ROO_087;ROO_090,2,2,yes,manual_review_no_rows_removed
