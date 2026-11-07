@@ -1,0 +1,15 @@
+change_id,topic,manuscript_location,verified_issue,status,required_revision,phase
+M01,Original dataset count,Manuscript Section 3,259 original records claimed; 256 source workbook rows,OPEN_SOURCE_EVIDENCE,"Find three missing originals or correct claim and derived totals, with authors' approval",P1
+M02,Temperature domain,Abstract/Methods/Conclusions,Three disjoint regimes; no data in 120-298 K gap,OPEN_CORRECTION,"Describe sparse disjoint regimes, not continuous validated 2-427 K",P1/P2
+M03,Cryogenic temperature range,Methods Section 3,Recorded 2-120 K,DOCUMENTED,Keep only supported observed range and cite original values,P1
+M04,High temperature range,Methods Section 3,Manuscript 302-427 K vs original 308-423 K,OPEN_CORRECTION,Investigate missing observations; correct claims to source-backed range,P1
+M05,Room actual temperature,Methods Section 3,160 source rows have no temperature column,OPEN_SOURCE_EVIDENCE,State 300 K as modeling assumption and recover true source temperatures where possible,P1
+M06,Filler loading unit and composition,Methods Section 3,Original Vol header; ref 29 source reports wt percent,OPEN_SOURCE_EVIDENCE,Verify concentration basis and document density-dependent conversions if applicable,P1
+M07,Paper-to-row provenance,Methods/Dataset supplement,0/256 original records matched to source table/figure,BLOCKED,Prepare DOI/formulation/measurement table and provide source evidence per retained observation,P1
+M08,Material system applicability,Abstract/Methods/Discussion,Citations span glass quartz Kevlar graphite TPU copper and epoxy,BLOCKED,Separate verified epoxy from other solid liquid analytical and unknown before ML claims,P1
+M09,High temperature BNNT-POSS identification,Methods/Discussion,Reviewer source claim vs old heuristic liquid guesses,BLOCKED,Resolve 42 records using publication figure/table or author extraction ledger,P1
+M10,Experimental vs analytical data,Tables 2/4/6,Reviewer says Reuss/Bruggeman outputs mixed with literature measurements,BLOCKED,Label every comparison as measured or theoretical; avoid theoretical values as ground truth,P1/P4
+M11,Duplicate/contradictory observations,Data supplement,3 same numeric input groups have 6 different target rows,OPEN_SOURCE_EVIDENCE,Verify material/process/measurement direction and document adjudication,P1
+M12,Reproducibility,Supplementary data/code,Dataset auditable but row-level sources unresolved,PARTIAL,"Publish verified ledger, scripts, hashes, exclusion reasons and code versions",P1/P10
+M13,Augmentation leakage,Methods Section 3,Reviewers criticize augment-first random split,DEFERRED,Split original study groups before any augmentation; rerun models,P2
+M14,External experimental validation,Figures and discussion,Errors and uncertainty not fully quantified,DEFERRED,Report actual experimental replicate errors and uncertainty after source cleaning,P5/P6

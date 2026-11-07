@@ -1,0 +1,37 @@
+name: P1.6 scientific signoff guard - revision-work
+on:
+  push:
+    branches: [revision-work]
+    paths:
+      - "revision_work/phase_01_provenance/signoff/**"
+      - "revision_work/phase_01_provenance/clean/**"
+      - ".github/workflows/p1-signoff.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-gated-p1-signoff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout revision-work only
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Use Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check all reviewer comments and gate safety tests
+        run: python -m unittest discover -s revision_work/phase_01_provenance/signoff -p 'test_*.py' -v
+      - name: Recompute all 256 original rows and source signoff
+        run: python revision_work/phase_01_provenance/signoff/build_signoff.py --repo . --output "$RUNNER_TEMP/p1_signoff"
+      - name: Upload evidence-gated report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-6-scientific-signoff-NOT-APPROVED
+          path: ${{ runner.temp }}/p1_signoff/
+          retention-days: 30
+          if-no-files-found: error

@@ -1,0 +1,41 @@
+issue_id,reviewer,comment_no,subject,phase_scope,p1_status,required_response
+R1-01,R1,1,Augmentation leakage,P2,DEFERRED,Split original records first; group augmentations
+R1-02,R1,2,Ungrouped literature validation,P1+P2,BLOCKED_P1_PROVENANCE,Recover paper and material IDs before grouped CV
+R1-03,R1,3,Model selection and nested tuning bias,P3,DEFERRED,Disjoint held-out evaluation and nested tuning
+R1-04,R1,4,Statistics and contradictory ranking claims,P4,DEFERRED,Paired fold comparisons; revise ranking language
+R1-05,R1,5,Physical and ML baselines plus prediction intervals,P4,DEFERRED,"Implement Maxwell, RF, SVR, GPR and uncertainty"
+R1-06,R1,6,Mixed material families and absent morphology,P1,BLOCKED_P1_PROVENANCE,Source-match and partition incompatible material systems
+R1-07,R1,7,Single-source high-temperature and domain mismatch,P1,BLOCKED_P1_PROVENANCE,Verify 42 rows against actual BNNT-POSS/epoxy and other sources
+R1-08,R1,8,Raw dataset count and documentation gaps,P1,BLOCKED_P1_PROVENANCE,Reconcile 259 manuscript with 256 original XLSX records
+R1-09,R1,9,Qualitative validation with large laboratory errors,P5+P6,DEFERRED,Report each independent specimen's MAE RMSE and percentage error
+R1-10,R1,10,Analytical model outputs mixed with experimental data,P1,BLOCKED_P1_PROVENANCE,Verify measurement type per row and separate analytical outputs
+R1-11,R1,11,Discontinuous temperatures and overclaimed scope,P1+P2,P1_SCOPE_FLAG_OPEN,Restrict continuous-range claims; assess real temperature coverage
+R1-12,R1,12,Uncertainty budget and calibration coverage,P6,DEFERRED,GUM-style uncertainty and suitable reference materials
+R1-13,R1,13,Physical plausibility and missing unfilled epoxy control,P4+P6,DEFERRED,Check constituent limits and independent neat-epoxy baseline
+R1-14,R1,14,Space-grade and adhesion overclaims,P10,DEFERRED,Remove unsupported qualification and adhesion claims
+R1-15,R1,15,Feature importance overinterpreted causally,P4,DEFERRED,Permutation or SHAP; distinguish correlation from physics
+R1-16,R1,16,Reproducibility and data sharing deficiencies,P1+P10,PARTIALLY_ADDRESSED,Code and numeric audits are available; primary sources not row mapped
+R1-17,R1,17,Title section numbering and citations,P1+P10,PARTIALLY_ADDRESSED,Bibliography audit started; revise paper after verified evidence
+R2-01,R2,1,Augmentation before partition,P2,DEFERRED,Split parents before augmenting
+R2-02,R2,2,Publication or material grouped cross-validation,P1+P2,BLOCKED_P1_PROVENANCE,Verify group identities before leave-one-study-out
+R2-03,R2,3,Provenance and non-epoxy contamination,P1,BLOCKED_P1_PROVENANCE,Deliver true DOI matrix filler measurement-type table
+R2-04,R2,4,Misleading continuous 2-427 K range,P1+P2,P1_SCOPE_FLAG_OPEN,Disclose observed regimes and unsupported temperature gaps
+R2-05,R2,5,CNT processing and network context,P10,DEFERRED,Discuss microstructure limitations with relevant literature
+R2-06,R2,6,Resin hardener grades and curing detail,P6+P10,DEFERRED,Document equivalent weights and processing protocol
+R2-07,R2,7,Independent sample counts and error bars,P6,DEFERRED,Document replication and variability
+R2-08,R2,8,SEM dispersion morphology and porosity,P6,DEFERRED,Characterize specimens or explicitly limit claims
+R2-09,R2,9,Thermal conductivity measurement uncertainty,P6,DEFERRED,Build uncertainty budget including parasitic heat leaks
+R2-10,R2,10,Fourier heat-flow and steady-state protocol,P6,DEFERRED,Report geometry heat-flow corrections and gradients
+R2-11,R2,11,Cryogenic constituent plausibility bounds,P4+P6,DEFERRED,Compare with temperature-specific Maxwell and HS bounds
+R2-12,R2,12,Graphene morphology and polymer interactions,P10,DEFERRED,Add context without claiming source-based results
+R2-13,R2,13,Physically inconsistent augmentation,P2,DEFERRED,No-augmentation ablation and measurement-aware noise
+R2-14,R2,14,Feature importance as causal mechanism,P4,DEFERRED,Grouped permutation importance or SHAP
+R2-15,R2,15,Model performance differences statistical testing,P4,DEFERRED,Paired folds and uncertainty intervals
+R2-16,R2,16,Theory versus experiment benchmarks,P1+P4,BLOCKED_P1_PROVENANCE,Reclassify underlying benchmark data by origin
+R2-17,R2,17,Errors on unseen validation cases,P5+P6,DEFERRED,Tabulate signed and absolute relative errors
+R3-01,R3,1,Technical English editing,P10,DEFERRED,Proofread final revised manuscript
+R3-02,R3,2,Augmentation and split leakage,P2,DEFERRED,Leakage-safe original-first partitioning
+R3-03,R3,3,Source and material grouped validation,P1+P2,BLOCKED_P1_PROVENANCE,Use DOI/material labels only after evidence verification
+R3-04,R3,4,Measurement uncertainty and error bars,P6,DEFERRED,Experimental uncertainty and calibrated ranges
+R3-05,R3,5,Statistical comparisons and lab measurement errors,P4+P6,DEFERRED,Paired statistical tests and quantified lab errors
+R3-06,R3,6,Suggested literature and relevance,P10,DEFERRED,Review suggested sources for relevance before citing
