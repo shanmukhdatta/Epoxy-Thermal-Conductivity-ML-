@@ -1,0 +1,36 @@
+name: P1.3 High-temp source compatibility
+on:
+  push:
+    branches: [revision-work]
+    paths:
+      - revision_work/phase_01_provenance/high_temp/**
+      - .github/workflows/p1-high-temperature-source-audit.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  high-temp-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout revision branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run P1.3 tests
+        run: python -m unittest discover -s revision_work/phase_01_provenance/high_temp -p 'test_*.py' -v
+      - name: Generate read-only 42-row source review
+        run: python revision_work/phase_01_provenance/high_temp/screen_high.py --repo . --output "$RUNNER_TEMP/p1_3"
+      - name: Upload original-data screening evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-3-high-source-review
+          path: ${{ runner.temp }}/p1_3/
+          retention-days: 30
+          if-no-files-found: error
