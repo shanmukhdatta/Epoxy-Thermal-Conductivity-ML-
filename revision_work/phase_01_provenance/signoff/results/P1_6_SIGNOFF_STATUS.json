@@ -1,0 +1,40 @@
+{
+  "phase": "P1.6",
+  "numeric_pipeline_status": "PASS",
+  "scientific_provenance_signoff": "BLOCKED",
+  "ready_to_train_verified_epoxy_model": false,
+  "ready_to_submit_revised_manuscript": false,
+  "total_original_records": 256,
+  "source_verified_records": 0,
+  "unverified_records": 256,
+  "verified_epoxy_eligible_records": 0,
+  "partition_counts": {
+    "verified_epoxy_experimental": 0,
+    "other_solid": 0,
+    "liquid_systems": 0,
+    "analytical_or_simulated": 0,
+    "unknown_provenance": 256
+  },
+  "original_data_modified": false,
+  "unresolved_input_target_conflict_rows": 6,
+  "missing_room_source_temperatures": 160,
+  "manuscript_claimed_original_records": 259,
+  "frozen_original_records": 256,
+  "blocked_gate_names": [
+    "paper_to_row_source_verification",
+    "epoxy_training_population",
+    "high_temp_material_source_conflict",
+    "room_temperature_source_metadata",
+    "manuscript_original_count_259_vs_256",
+    "filler_loading_basis_and_measurement_type"
+  ],
+  "interpretation": "CI PASS validates the audit and correctly detects incomplete source provenance; it is NOT scientific P1 signoff.",
+  "reviewer_issues_total": 40,
+  "reviewer_issue_distribution": {
+    "R1": 17,
+    "R2": 17,
+    "R3": 6
+  },
+  "reviewer_p1_blocked_items": 9,
+  "manuscript_changes_proposed_not_applied": 14
+}

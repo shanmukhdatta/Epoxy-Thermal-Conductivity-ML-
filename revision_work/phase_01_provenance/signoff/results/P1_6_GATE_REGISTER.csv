@@ -1,0 +1,11 @@
+gate,state,evidence
+original_data_sha256,PASS,Frozen original xlsx hashes validated by P1.5
+record_count_and_partition_conservation,PASS,"256 originals, unique IDs, complete partition coverage"
+source_ledger_reproducibility,PASS,"P1.5 independently re-executed, equal to committed summary"
+numeric_quality_screen,PASS_WITH_REVIEW_FLAGS,"3 conflicting-target groups, 30 loading flags, 4 physical-range review flags"
+paper_to_row_source_verification,BLOCKED,256 rows have unknown paper-to-row provenance
+epoxy_training_population,BLOCKED,0 source-verified and loading-compatible epoxy records eligible
+high_temp_material_source_conflict,BLOCKED,42 high-temperature rows unverified
+room_temperature_source_metadata,BLOCKED,160 room source rows do not record T
+manuscript_original_count_259_vs_256,BLOCKED,Manuscript states 259 originals; frozen workbooks prove 256; explanation/correction not approved
+filler_loading_basis_and_measurement_type,BLOCKED,No validated loading units or experimental/analytical origin for unresolved records
