@@ -1,0 +1,22 @@
+name: Kaggle notebook structural audit
+on:
+  push:
+    paths:
+      - 'notebooks/**'
+      - 'scripts/validate_kaggle_notebooks.py'
+      - '.github/workflows/kaggle-notebooks-static.yml'
+  pull_request:
+    paths:
+      - 'notebooks/**'
+      - 'scripts/validate_kaggle_notebooks.py'
+      - '.github/workflows/kaggle-notebooks-static.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate original and editable Kaggle notebook structure
+        run: python scripts/validate_kaggle_notebooks.py
